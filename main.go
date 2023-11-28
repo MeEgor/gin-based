@@ -3,8 +3,11 @@ package main
 import (
 	"log"
 	"net/http"
-	"web-service-gin/controllers"
+
+	// apiV1 "web-service-gin/controllers/api/v1"
+	// apiV2 "web-service-gin/controllers/api/v2"
 	"web-service-gin/models"
+	"web-service-gin/router"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -19,7 +22,15 @@ func main() {
 	r := gin.Default()
 	models.ConnectDatabase()
 
-	r.GET("/users", controllers.FindUsers)
+	router.Routes(r)
+
+	// r.GET("/users", apiV1.FindUsers)
+	// r.GET("/users/:id", apiV1.FindUser)
+	// r.POST("/users", apiV1.CreateUser)
+	// r.PATCH("/users/:id", apiV1.UpdateUser)
+	// r.DELETE("/users/:id", apiV1.DeleteUser)
+
+	// r.GET("/v2/users", apiV2.FindUsers)
 
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"data": "hello world"})
