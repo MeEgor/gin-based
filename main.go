@@ -1,9 +1,9 @@
 package main
 
 import (
+	"gin-based/models"
+	"gin-based/router"
 	"log"
-	"web-service-gin/models"
-	"web-service-gin/router"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"

@@ -1,7 +1,7 @@
 package api
 
 import (
-	models "web-service-gin/models"
+	models "gin-based/models"
 )
 
 type User struct {

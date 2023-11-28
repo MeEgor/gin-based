@@ -1,7 +1,7 @@
 package posts
 
 import (
-	"web-service-gin/models"
+	"gin-based/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gofrs/uuid"

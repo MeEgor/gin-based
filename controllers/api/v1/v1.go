@@ -1,9 +1,9 @@
 package v1
 
 import (
-	posts "web-service-gin/controllers/api/v1/posts"
-	users "web-service-gin/controllers/api/v1/users"
-	"web-service-gin/middleware"
+	posts "gin-based/controllers/api/v1/posts"
+	users "gin-based/controllers/api/v1/users"
+	"gin-based/middleware"
 
 	"github.com/gin-gonic/gin"
 )

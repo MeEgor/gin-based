@@ -3,7 +3,7 @@ package v2
 import (
 	"github.com/gin-gonic/gin"
 
-	"web-service-gin/controllers/api/v2/users"
+	"gin-based/controllers/api/v2/users"
 )
 
 func Routes(v2 *gin.RouterGroup) {

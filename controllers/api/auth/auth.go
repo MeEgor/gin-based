@@ -2,9 +2,9 @@ package auth
 
 import (
 	"fmt"
-	"web-service-gin/helpers/password"
-	"web-service-gin/middleware"
-	"web-service-gin/models"
+	"gin-based/helpers/password"
+	"gin-based/middleware"
+	"gin-based/models"
 
 	"github.com/gin-gonic/gin"
 )

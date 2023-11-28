@@ -1,7 +1,7 @@
 package users
 
 import (
-	"web-service-gin/models"
+	"gin-based/models"
 
 	"github.com/gin-gonic/gin"
 )

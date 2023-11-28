@@ -1,4 +1,4 @@
-module web-service-gin
+module gin-based
 
 go 1.21.4
 

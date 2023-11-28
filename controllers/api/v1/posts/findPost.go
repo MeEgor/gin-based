@@ -3,7 +3,7 @@ package posts
 import (
 	"github.com/gin-gonic/gin"
 
-	"web-service-gin/models"
+	"gin-based/models"
 )
 
 /*

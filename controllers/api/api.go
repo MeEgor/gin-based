@@ -3,10 +3,10 @@ package api
 import (
 	"github.com/gin-gonic/gin"
 
-	auth "web-service-gin/controllers/api/auth"
-	v1 "web-service-gin/controllers/api/v1"
-	v2 "web-service-gin/controllers/api/v2"
-	"web-service-gin/middleware"
+	auth "gin-based/controllers/api/auth"
+	v1 "gin-based/controllers/api/v1"
+	v2 "gin-based/controllers/api/v2"
+	"gin-based/middleware"
 )
 
 func Routes(api *gin.RouterGroup) {

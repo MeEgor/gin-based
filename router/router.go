@@ -1,8 +1,8 @@
 package router
 
 import (
-	"web-service-gin/controllers/api"
-	"web-service-gin/controllers/web"
+	"gin-based/controllers/api"
+	"gin-based/controllers/web"
 
 	"github.com/gin-gonic/gin"
 )

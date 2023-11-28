@@ -1,8 +1,8 @@
 package users
 
 import (
-	models "web-service-gin/models"
-	webModels "web-service-gin/models/web"
+	models "gin-based/models"
+	webModels "gin-based/models/web"
 
 	"github.com/gin-gonic/gin"
 )
