@@ -1,7 +1,6 @@
-package controllers
+package posts
 
 import (
-	"fmt"
 	"web-service-gin/models"
 
 	"github.com/gin-gonic/gin"
@@ -16,10 +15,8 @@ func CreatePost(c *gin.Context) {
 		return
 	}
 
-	// Print the input struct to the console
-	fmt.Printf("Input: %+v\n", input)
-
-	post := models.Post{Title: input.Title, Body: input.Body, UserID: uuid.FromStringOrNil("1ee8c387-66a0-651a-84fd-d00eb29192d5")}
+	userId := c.MustGet("id").(uuid.UUID)
+	post := models.Post{Title: input.Title, Body: input.Body, UserID: userId}
 	models.DB.Create(&post)
 
 	c.JSON(200, gin.H{"ok": true, "post": post})

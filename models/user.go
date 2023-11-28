@@ -2,11 +2,11 @@ package models
 
 type User struct {
 	Base
-	Name     string `json:"name"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	Name           string `json:"name"`
+	Email          string `json:"email"`
+	HashedPassword string `json:"-"`
 
-	Posts []Post `json:"posts"`
+	Posts []Post `json:"posts,omitempty"`
 }
 
 type CreateUserInput struct {

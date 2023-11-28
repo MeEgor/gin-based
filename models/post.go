@@ -7,6 +7,7 @@ type Post struct {
 	Title  string    `json:"title"`
 	Body   string    `json:"body"`
 	UserID uuid.UUID `json:"user_id"`
+	Author User      `json:"author,omitempty" gorm:"foreignKey:UserID"`
 }
 
 type CreatePostInput struct {

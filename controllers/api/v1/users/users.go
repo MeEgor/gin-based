@@ -1,22 +1,23 @@
-package controllers
+package users
 
 import (
-	"web-service-gin/models"
+	models "web-service-gin/models"
+	apiModels "web-service-gin/models/api"
 
 	"github.com/gin-gonic/gin"
 )
 
 func FindUsers(c *gin.Context) {
-	var users []models.User
-	models.DB.Preload("Posts").Find(&users)
+	var users []apiModels.User
+	models.DB.Find(&users)
 
 	c.JSON(200, gin.H{"ok": true, "users": users, "message": "Hello from API V1"})
 }
 
 func FindUser(c *gin.Context) {
-	var user models.User
+	var user apiModels.User
 
-	if err := models.DB.Where("id = ?", c.Param("id")).First(&user).Error; err != nil {
+	if err := models.DB.Preload("Posts").Where("id = ?", c.Param("id")).First(&user).Error; err != nil {
 		c.JSON(404, gin.H{"ok": false, "error": "User not found!"})
 		return
 	}
